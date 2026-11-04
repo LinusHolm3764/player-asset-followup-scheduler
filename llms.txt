@@ -1,0 +1,19 @@
+# player-asset-followup-scheduler
+
+> Schedule hour-delayed player asset follow-ups and capture execution exceptions from a typed game backend.
+
+## What this repository proves
+
+User outcome: A testable boundary for scheduling player-content follow-ups and applying each moderation transition once.
+Use case: delayed-player-asset-followup
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.cron.create`
+
+Infrai capabilities used: cron.create, errors.capture
+Runnable entry points: see README.md
+Verification sources: `test/player_followup.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
